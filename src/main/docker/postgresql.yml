@@ -1,0 +1,12 @@
+version: '2'
+services:
+    avalicao360goncalves-postgresql:
+        container_name: avalicao360goncalves-postgresql
+        image: postgres:9.5.4
+        # volumes:
+        #     - ~/volumes/jhipster/avalicao360goncalves/postgresql/:/var/lib/postgresql/
+        environment:
+            - POSTGRES_USER=avalicao360goncalves
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432
