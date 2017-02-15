@@ -20,5 +20,9 @@
 
     <cache alias="br.ibm.com.domain.User.persistentTokens" uses-template="simple"/>
 
+    <cache alias="br.ibm.com.domain.Equipe" uses-template="simple"/>
+
+    <cache alias="br.ibm.com.domain.Equipe.membros" uses-template="simple"/>
+
     <!-- jhipster-needle-ehcache-add-entry -->
 </config>
