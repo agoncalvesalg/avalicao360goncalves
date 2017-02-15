@@ -8,6 +8,10 @@
             "entities": {
                 "main": "Entities",
                 "equipe": "Equipe",
+                "avaliacaoModelo": "Avaliacao Modelo",
+                "pergunta": "Pergunta",
+                "resposta": "Resposta",
+                "avaliacao": "Avaliacao",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

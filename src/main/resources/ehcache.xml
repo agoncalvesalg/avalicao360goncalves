@@ -24,5 +24,15 @@
 
     <cache alias="br.ibm.com.domain.Equipe.membros" uses-template="simple"/>
 
+    <cache alias="br.ibm.com.domain.AvaliacaoModelo" uses-template="simple"/>
+
+    <cache alias="br.ibm.com.domain.Pergunta" uses-template="simple"/>
+
+    <cache alias="br.ibm.com.domain.Resposta" uses-template="simple"/>
+
+    <cache alias="br.ibm.com.domain.Avaliacao" uses-template="simple"/>
+
+    <cache alias="br.ibm.com.domain.Avaliacao.respostas" uses-template="simple"/>
+
     <!-- jhipster-needle-ehcache-add-entry -->
 </config>
