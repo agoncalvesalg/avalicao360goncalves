@@ -5,9 +5,9 @@
         .module('avalicao360GoncalvesApp')
         .controller('RespostaDialogController', RespostaDialogController);
 
-    RespostaDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', '$q', 'entity', 'Resposta', 'Pergunta'];
+    RespostaDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', '$q', 'entity', 'Resposta', 'Pergunta', 'Avaliacao'];
 
-    function RespostaDialogController ($timeout, $scope, $stateParams, $uibModalInstance, $q, entity, Resposta, Pergunta) {
+    function RespostaDialogController ($timeout, $scope, $stateParams, $uibModalInstance, $q, entity, Resposta, Pergunta, Avaliacao) {
         var vm = this;
 
         vm.resposta = entity;
@@ -22,6 +22,7 @@
         }).then(function(pergunta) {
             vm.perguntas.push(pergunta);
         });
+        vm.avaliacaos = Avaliacao.query();
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();

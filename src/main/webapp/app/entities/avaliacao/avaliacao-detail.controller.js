@@ -5,9 +5,9 @@
         .module('avalicao360GoncalvesApp')
         .controller('AvaliacaoDetailController', AvaliacaoDetailController);
 
-    AvaliacaoDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'Avaliacao', 'User', 'Resposta'];
+    AvaliacaoDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'Avaliacao', 'User'];
 
-    function AvaliacaoDetailController($scope, $rootScope, $stateParams, previousState, entity, Avaliacao, User, Resposta) {
+    function AvaliacaoDetailController($scope, $rootScope, $stateParams, previousState, entity, Avaliacao, User) {
         var vm = this;
 
         vm.avaliacao = entity;

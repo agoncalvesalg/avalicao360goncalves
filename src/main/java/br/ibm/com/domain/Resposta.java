@@ -33,6 +33,9 @@ public class Resposta implements Serializable {
     @JoinColumn(unique = true)
     private Pergunta pergunta;
 
+    @ManyToOne
+    private Avaliacao avaliacao;
+
     public Long getId() {
         return id;
     }
@@ -65,6 +68,19 @@ public class Resposta implements Serializable {
 
     public void setPergunta(Pergunta pergunta) {
         this.pergunta = pergunta;
+    }
+
+    public Avaliacao getAvaliacao() {
+        return avaliacao;
+    }
+
+    public Resposta avaliacao(Avaliacao avaliacao) {
+        this.avaliacao = avaliacao;
+        return this;
+    }
+
+    public void setAvaliacao(Avaliacao avaliacao) {
+        this.avaliacao = avaliacao;
     }
 
     @Override

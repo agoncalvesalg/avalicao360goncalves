@@ -50,6 +50,12 @@
                 This field is required.
             </p>
         </div>
+        <div class="form-group">
+            <label data-translate="avalicao360GoncalvesApp.resposta.avaliacao" for="field_avaliacao">Avaliacao</label>
+            <select class="form-control" id="field_avaliacao" name="avaliacao" ng-model="vm.resposta.avaliacao" ng-options="avaliacao as avaliacao.id for avaliacao in vm.avaliacaos track by avaliacao.id">
+                <option value=""></option>
+            </select>
+        </div>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">

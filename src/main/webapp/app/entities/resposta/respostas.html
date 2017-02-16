@@ -21,6 +21,7 @@
                     <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="nota"><span data-translate="avalicao360GoncalvesApp.resposta.nota">Nota</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="pergunta.assunto"><span data-translate="avalicao360GoncalvesApp.resposta.pergunta">Pergunta</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="avaliacao.id"><span data-translate="avalicao360GoncalvesApp.resposta.avaliacao">Avaliacao</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
                 </tr>
             </thead>
@@ -30,6 +31,9 @@
                     <td>{{resposta.nota}}</td>
                     <td>
                         <a ui-sref="pergunta-detail({id:resposta.pergunta.id})">{{resposta.pergunta.assunto}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="avaliacao-detail({id:resposta.avaliacao.id})">{{resposta.avaliacao.id}}</a>
                     </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">

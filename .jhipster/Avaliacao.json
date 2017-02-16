@@ -10,12 +10,6 @@
             ],
             "otherEntityField": "login",
             "ownerSide": true
-        },
-        {
-            "relationshipName": "resposta",
-            "otherEntityName": "resposta",
-            "relationshipType": "one-to-many",
-            "otherEntityRelationshipName": "avaliacao"
         }
     ],
     "fields": [

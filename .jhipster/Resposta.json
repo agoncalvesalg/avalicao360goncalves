@@ -11,6 +11,12 @@
             "otherEntityField": "assunto",
             "ownerSide": true,
             "otherEntityRelationshipName": "resposta"
+        },
+        {
+            "relationshipName": "avaliacao",
+            "otherEntityName": "avaliacao",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
         }
     ],
     "fields": [

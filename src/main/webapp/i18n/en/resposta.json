@@ -17,7 +17,8 @@
                 "title": "Resposta"
             },
             "nota": "Nota",
-            "pergunta": "Pergunta"
+            "pergunta": "Pergunta",
+            "avaliacao": "Avaliacao"
         }
     }
 }

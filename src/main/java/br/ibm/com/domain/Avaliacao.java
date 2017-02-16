@@ -1,6 +1,5 @@
 package br.ibm.com.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -8,8 +7,6 @@ import javax.persistence.*;
 import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.HashSet;
-import java.util.Set;
 import java.util.Objects;
 
 /**
@@ -33,11 +30,6 @@ public class Avaliacao implements Serializable {
     @ManyToOne
     @NotNull
     private User user;
-
-    @OneToMany(mappedBy = "avaliacao")
-    @JsonIgnore
-    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-    private Set<Resposta> respostas = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -71,31 +63,6 @@ public class Avaliacao implements Serializable {
 
     public void setUser(User user) {
         this.user = user;
-    }
-
-    public Set<Resposta> getRespostas() {
-        return respostas;
-    }
-
-    public Avaliacao respostas(Set<Resposta> respostas) {
-        this.respostas = respostas;
-        return this;
-    }
-
-    public Avaliacao addResposta(Resposta resposta) {
-        respostas.add(resposta);
-        resposta.setAvaliacao(this);
-        return this;
-    }
-
-    public Avaliacao removeResposta(Resposta resposta) {
-        respostas.remove(resposta);
-        resposta.setAvaliacao(null);
-        return this;
-    }
-
-    public void setRespostas(Set<Resposta> respostas) {
-        this.respostas = respostas;
     }
 
     @Override
